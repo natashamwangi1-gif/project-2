@@ -1,0 +1,22 @@
+
+{
+  "name": "fixmyblock",
+  "version": "1.0.0",
+  "description": "A community platform for reporting and tracking local problems.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "community",
+    "reports",
+    "local-problems",
+    "neighbourhood"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors":"^2.8.6",
+    "express":"^5.3.0"  
+}
+}
