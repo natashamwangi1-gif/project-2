@@ -21,7 +21,7 @@ issueForm.addEventListener('submit', function(event){
     const category=document.getElementById("i-cat")
 
 
-    
+
     const location=document.getElementById("i-loc")
     const description=document.getElementById("i-desc")
 
@@ -47,6 +47,16 @@ issueCategory.addEventListener('change', function(){
         otherInput.hidden=true;
     }
 })
-
-
+const mapElement= document.getElementById("map")
+if(mapElement&& typeof L !=="undefined"){
+    const map= L.map ("map").setView([-1.2197, 36.8911], 13)
+    L. tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{
+    attribution:
+    '&copy;<a href="https://www.openstreetmap.org/copyright">openstreetmap</a> contributors'
+}).addTo(map)
+L.marker([-1.2197, 36.8911])
+.addTo(map)
+.bindpopup("FixMyBlock - kasarani, Nairobi")
+.openPopup()
+}
 
