@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixMyBlock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1 class="logo">FixMyBlock</h1>
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#">Explore reports</a>
+            <a href="#">About us</a>
+            <a href="#">Sign in</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <p class="line">BUILD A BETTER BLOCK.</p>
+            <h2 class="hero-title">Your Community. Your Voice. Your Block.</h2>
+            <p class="hero-desc">Report neighbourhood problems, help your community stay informed, and track progress towards solutions.</p>
+            <button id="r-btn">Report an Issue.</button>
+        </section>
+
+        <section id="form-sec" hidden>
+            <h2>Report a Community issue</h2>
+
+            <form action="" id="form-issue">
+                <label for="i-cat">Issue Type.</label>
+                <select name="" id="i-cat">
+                    <option value="pt">pothole</option>
+                    <option value="b-l">broken-streetlight</option>
+                    <option value="waste">waste collection</option>
+                    <option value="other">other</option>
+                </select>
+
+                <label for="other-issue" hidden>please specify your issue</label>
+                <input type="text" id="other-issue" placeholder="specify your issue" hidden>
+
+                <label for="i-loc">location</label>
+                <input type="text" id="i-loc" placeholder="e.g.Kasarani, Nairobi... " required>
+
+                <label for="i-desc">Describe the issue</label>
+                <textarea name="desc" id="i-desc" rows="4" placeholder="Explain the problem and any important details..." required></textarea>
+
+                <button type="submit" id="submit"></button>
+                <button type="button" id="cancel"></button>
+            </form>
+        </section>
+
+        <section class="report">
+            <h2 class="sec-title">Community reports</h2>
+            <p class="sec-desc">Explore issues reported by community members.</p>
+        </section>
+
+        <div class="r-cont">
+            <div class="card">
+                <h3 class="r-cat">Issue category</h3>
+                <p class="r-loc">Location</p>
+                <p class="r-desc">Description</p>
+                <span r-status>Status</span>
+            </div>
+
+            <div class="card">
+                <h3 class="r-cat">Issue category</h3>
+                <p class="r-loc">Location</p>
+                <p class="r-desc">Description</p>
+                <span r-status>Status</span>
+            </div>
+
+            <div class="card">
+                <h3 class="r-cat">Issue category</h3>
+                <p class="r-loc">Location</p>
+                <p class="r-desc">Description</p>
+                <span r-status>Status</span>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <h3 class="f-logo">FixMyBlock</h3>
+        <p class="F-desc">Empowering communities to report local issues, track progress and build cleaner, safer neighbourhoods.</p>
+        <p class="copy">2026 FixMyBlock. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
