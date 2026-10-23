@@ -60,4 +60,17 @@ L.marker([-1.2197, 36.8911])
 .bindpopup("FixMyBlock - kasarani, Nairobi")
 .openPopup()
 }
+async function fetchReport(){
+    try{
+        const response=await fetch("./report.json" )
+        if (response.ok){
+            throw new error("could not load reports")}
+            const reports=await response.json()
+    
+   console.log(reports)
+        }catch (error)
+        console.error("error fetching reports:" ,error)
+ }
+
+fetchReport()
 

@@ -1,0 +1,11 @@
+[
+    {"id":1,
+"title": "pothole on the road",
+"category":"roads",
+"description":"there is a large pothole that needs repair",
+"location":"kasarani,nairobi",
+"status":"pending",
+"latitude":"-1.2205",
+"longitude":36.8911
+}
+]
