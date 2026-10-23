@@ -108,4 +108,65 @@ border-radius: 12px;
 z-index: 1;
 background-color: lightgray;
 }
+#form-issue{ max-width: 650px;
+margin: 40px;
+padding: 30px;
+background-color: #ffffff;
+border: 1px solid #ffffff;
+border-radius: 16px;
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+#form-issue h2{margin-top: 0;
+margin-bottom: 10px;
+color: #205c3b;
+font-size: 26px;
+}
+#form-issue label{display: block;
+margin-top: 20px;
+margin-bottom: 8px;
+color: #26392d;
+font-weight: 600;
+}
+#form-issue input,
+#form-issue select,
+#form-issue textarea{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid whitesmoke;
+    border-radius: 9px;
+    background-color: white;
+    color: #26392d;
+    font: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+#form-issue input:focus,
+#form-issue:focus,
+#form-issue textarea{
+    outline: none;
+    border-color: #328052;
+    box-shadow: 0 0 0 3px rgba(50,128,82, 0.12);
+}
+#form-issue textarea{
+    min-height: 120px;
+    resize: vertical;
+}
+#form-issue button[type="submit"]{
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    border-radius: 9px;
+    background: color #247747;
+    color: white;
+    font:inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+#form-issue button[type="submit"]:hover{
+    background-color: #195c35;
+}
+
 

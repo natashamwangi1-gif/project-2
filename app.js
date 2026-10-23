@@ -47,6 +47,7 @@ issueCategory.addEventListener('change', function(){
         otherInput.hidden=true;
     }
 })
+
 const mapElement= document.getElementById("map")
 if(mapElement&& typeof L !=="undefined"){
     const map= L.map ("map").setView([-1.2197, 36.8911], 13)
