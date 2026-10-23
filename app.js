@@ -47,7 +47,7 @@ issueCategory.addEventListener('change', function(){
         otherInput.hidden=true;
     }
 })
-
+//information from leaflet
 const mapElement= document.getElementById("map")
 if(mapElement&& typeof L !=="undefined"){
     const map= L.map ("map").setView([-1.2197, 36.8911], 13)
@@ -60,17 +60,25 @@ L.marker([-1.2197, 36.8911])
 .bindpopup("FixMyBlock - kasarani, Nairobi")
 .openPopup()
 }
+const API_URL="./report.json"
 async function fetchReport(){
     try{
-        const response=await fetch("./report.json" )
-        if (response.ok){
+        const response=await fetch("API_URL" )
+        if (!response.ok){
             throw new error("could not load reports")}
             const reports=await response.json()
     
    console.log(reports)
-        }catch (error)
+   reports.forEach(function(report){
+    L.marker([report.latitude, report.longitude])
+    .addTo(map)
+    .bindpopup(
+        `<strong>${report.title}</strong><br>${report.description}`
+    )
+   })
+        }catch (error){
         console.error("error fetching reports:" ,error)
  }
-
+}
 fetchReport()
 
